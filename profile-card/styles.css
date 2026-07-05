@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg);
+    background-color: #FFF0F5;
 }
 
 .profile-card {
@@ -65,7 +65,7 @@ body {
     font-size: 25px;
     font-family: "Mrs Sheppards", cursive;
     text-shadow: 2px 1px 2px #000;
-    color: rgba(255, 255, 255, 0.7);
+    color: whitesmoke;
     font-weight: 400;
 }
 
