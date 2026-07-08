@@ -1,3 +1,11 @@
+:root {
+    --primary: #61a8bc;
+    --primary-dark: #4b8c9d;
+    --radius: 18px;
+    --shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -9,21 +17,28 @@ html {
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 카드 영역 */
+.card-section {
+    width: 100%;
+    padding: 3rem 1.4rem;
     background-color: #F5F6F8;
 }
 
-.card-section {
+/* 상단 타이틀 박스 */
+.section-title {
     max-width: 1280px;
-    width: 100%;
-    padding: 50px 20px;
 }
-
 
 .section-title .top {
     display: flex;
@@ -54,13 +69,13 @@ body {
 .top-left span {
     font-weight: 700;
     font-size: 1.7rem;
-    color: #4E8B9C;
+    color: var(--primary-dark);
 }
 
 .top-right button {
-    width: 150px;
+    width: 10rem;
     padding: 8px 18px;
-    background-color: #61a8bc;
+    background-color: var(--primary);
     color: #fff;
     font-weight: 400;
     font-size: 1rem;
@@ -72,7 +87,7 @@ body {
 
 
 .top-right button:hover {
-    background: #4b8c9d;
+    background: var(--primary-dark);
 }
 
 
@@ -93,11 +108,12 @@ body {
 
 .section-title p {
     color: #777;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* 메뉴 카드*/
 .card-container {
+    max-width: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,11 +124,11 @@ body {
 .product-card {
     width: 100%;
     max-width: 270px;
-    border-radius: 18px;
+    border-radius: var(--radius);
     padding: 18px;
     background: white;
     border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     position: relative;
     color: #333;
     transition: transform .35s ease;
@@ -120,7 +136,7 @@ body {
 }
 
 .product-card:hover {
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-hover);
 }
 
 .product-card img {
@@ -188,15 +204,18 @@ body {
     border-color: #b6bcc6;
 }
 
-/*음료수 섹션*/
-
-.drink-menu-section {
-    width: 100%;
-    max-width: 1280px;
-    padding: 50px 20px;
+.coupon:hover {
+    color: var(--primary);
 }
 
-.drink-menu-section .section-title h3 {
+/*음료 섹션*/
+.drink-card-section {
+    width: 100%;
+    max-width: 1280px;
+    padding: 3rem 1.4rem;
+}
+
+.drink-card-section .section-title h3 {
     margin-top: 10px;
     display: inline-block;
     color: #bdbdbd;
@@ -214,14 +233,14 @@ body {
 }
 
 .main-card {
-    width: 100%;
-    max-width: 270px;
-    min-height: 380px;
-    border-radius: 18px;
-    padding: 18px;
+
+    width: 230px;
+    height: 280px;
+    border-radius: var(--radius);
+    padding: 1px;
     background: white;
     border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     position: relative;
     color: #333;
     transition: transform .35s ease;
@@ -229,7 +248,7 @@ body {
 }
 
 .main-card:hover {
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-hover);
 }
 
 .drink-card {
@@ -237,18 +256,18 @@ body {
     width: 100%;
     max-width: 200px;
     max-height: 200px;
-    border-radius: 18px;
+    border-radius: var(--radius);
     padding: 18px;
     background: white;
     border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     position: relative;
     color: #333;
     cursor: pointer;
 }
 
 .drink-card:hover {
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-hover);
 }
 
 .main-card img {
@@ -270,7 +289,7 @@ body {
 
 .main-card p {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 15%;
     font-size: 1rem;
     font-weight: 400;
@@ -285,7 +304,7 @@ body {
 }
 
 
-.drink-card .category-tag {
+.best-tag {
     z-index: 1;
     position: absolute;
     top: 14px;
@@ -295,13 +314,22 @@ body {
     border: none;
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 400;
+}
+
+/* 반응형 대응 */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
 }
 
 @media (max-width: 580px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .top {
