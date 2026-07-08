@@ -1,0 +1,219 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Noto Sans KR", sans-serif;
+     background-color: #F5F6F8;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /* 레이아웃 */
+ .container {
+     width: 60%;
+     margin: 30px 0 auto;
+     display: grid;
+     grid-template-areas:
+         "header header"
+         "img-area content"
+         "footer footer";
+     grid-template-columns: 1fr 1fr;
+     gap: 3px;
+     padding: 10px;
+ }
+
+ .container div {
+     background-color: #F5F6F8;
+     padding: 10px;
+ }
+
+ /* 카드의 상단 영역*/
+ .container .header {
+     grid-area: header;
+     text-align: left;
+ }
+
+ .container .card-title {
+     font-size: 1rem;
+     font-weight: 400;
+     color: #acaaaa;
+     font-family: "Noto Sans KR", sans-serif;
+ }
+
+ .container .card-title strong {
+     font-size: 1.3rem;
+     font-weight: 500;
+     color: black;
+ }
+
+ .container p {
+     margin-top: 10px;
+     margin-bottom: 5px;
+     font-size: 0.9rem;
+ }
+
+ /* 카드의 왼쪽 영역 */
+ .container .img-area {
+     grid-area: img-area;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+ }
+
+ .img-area img {
+     width: 90%;
+     object-fit: contain;
+     cursor: pointer;
+     transition: transform .5s ease;
+ }
+
+ .img-area img:hover {
+     box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.15);
+     transform: translateY(-3px);
+ }
+
+ .img-area .badge {
+     position: absolute;
+     top: 8%;
+     left: 10%;
+     display: inline-block;
+     background: #0d6efd;
+     border-radius: 5px;
+     color: white;
+     padding: 5px 10px;
+     font-size: 0.8rem;
+     font-weight: 600;
+ }
+
+ /* 카드 오른쪽 영역 */
+ .container .content {
+     grid-area: content;
+ }
+
+ .content .product-title {
+     margin: 20px 10px 0;
+     font-size: 1rem;
+     color: rgb(235, 43, 139);
+ }
+
+ .price-section del {
+     color: #a3a2a2;
+ }
+
+ .price-section strong {
+     color: rgb(230, 57, 143);
+     font-size: 1.2rem;
+ }
+
+ .price-section span {
+     color: red;
+     font-weight: 600;
+ }
+
+ .product-info {
+     border-top: 2px dotted #b6bcc6;
+     margin: 1.2rem 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 25px 0;
+     font-weight: 600;
+ }
+
+ .option-box {
+     margin: 1.2rem 0;
+     border-top: 2px dotted #b6bcc6;
+     display: flex;
+     align-items: center;
+     gap: 15px;
+ }
+
+ .option-box select {
+     flex: 1.2;
+     font-size: 1rem;
+ }
+
+ .minimum-order {
+     border-top: 2px dotted #b6bcc6;
+     color: gray;
+ }
+
+ .order-number {
+     margin: 1rem 0;
+     font-weight: 600;
+ }
+
+ .total-price {
+     margin: 1rem 0;
+     display: flex;
+     justify-content: space-between;
+     padding: 20px 0;
+ }
+
+ .button-group {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+ }
+
+ .cart-btn,
+ .buy-btn {
+     margin-top: 0.5rem;
+     flex: 1;
+     padding: 10px 20px;
+     font-size: 1.2rem;
+     border-style: solid;
+     border-color: #d8d6d6;
+     border-radius: 10px;
+     cursor: pointer;
+
+ }
+
+ .buy-btn {
+     background: #0078d7;
+     color: white;
+     border-style: solid;
+     border-color: #0078d7;
+ }
+
+ .buy-btn:hover {
+     background: #045ca3;
+ }
+
+ .cart-btn:hover {
+     border-color: rgba(104, 104, 104, 0.5);
+ }
+
+ /* 카드의 하단 영역*/
+ .container .footer {
+     grid-area: footer;
+     background-image: url('https://image.aladin.co.kr/img/bn/strategy/ams/202607/800x115.jpg');
+     min-height: 100px;
+     margin-top: 30px;
+     grid-area: footer;
+     text-align: center;
+ }
+
+
+ @media (max-width: 568px) {
+     html {
+         font-size: 13px;
+     }
+
+     .container {
+         width: 90%;
+         grid-template-areas:
+             "header"
+             "img-area"
+             "content"
+             "footer";
+
+         grid-template-columns: 1fr;
+     }
+ }
