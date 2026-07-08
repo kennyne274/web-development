@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards UI</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!--css link-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="card-title"><strong>명상록 (그리스어 원전 완역본)</strong> - 철학자 황제가 전쟁터에서 자신에게 쓴 일기 검색 | 현대지성 클래식 18
+            </h1>
+            <p>마르쿠스 아우렐리우스 (지은이),박문재 (옮긴이)현대지성2018-04-02원제</p>
+        </div>
+        <div class="img-area"><img src="book.jpg" alt="현대지성 명상록 표지 디자인">
+            <span class="badge">베스트셀러</span>
+        </div>
+        <div class="content">
+
+
+            <h2 class="product-title">읽기의 계보: 자기 자신을 쓴다는 것</h2>
+
+            <div class="price-section">
+                <p>정가
+                    <del>12,000원</del>
+                <p>판매가
+                    <strong>10,800원 </strong>(<span>10%</span>, 1,200원 할인)
+                </p>
+            </div>
+
+            <div class="shipping-info">
+                <p>배송비 3,000원 (15,000원 이상 구매 시 무료)</p>
+            </div>
+
+
+
+            <div class="product-info">
+                <span>상품 정보고시</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+
+            <div class="option-box">
+                <label for="shopping-bag">쇼핑백 여부</label>
+
+                <select id="shopping-bag">
+                    <option selected disabled>
+                        - [필수] 옵션을 선택해주세요 -
+                    </option>
+                    <option>------------------------</option>
+                    <option>추가 안함</option>
+                    <option>쇼핑백 추가(100원)</option>
+                </select>
+            </div>
+
+
+            <p class="minimum-order">(최소 주문 수량 1개 이상)</p>
+
+            <div class="order-number">
+                <label for="num">수량 : </label><input type="number" min="1" value="1" id="num"> 개
+            </div>
+            <div class="total-price">
+                <span>총 상품금액</span>
+                <span class="amount">10,800원</span>
+            </div>
+
+            <div class="button-group">
+
+                <button class="cart-btn">
+                    장바구니
+                </button>
+
+                <button class="buy-btn">
+                    구매하기
+                </button>
+
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+
+</html>
