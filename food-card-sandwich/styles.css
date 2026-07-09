@@ -1,0 +1,131 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Poppins", sans-serif;
+     background: #EBEDD5;
+ }
+
+ .card-wrapper {
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .food-card {
+     width: 350px;
+     background: #f9f9f9f7;
+     border-radius: 24px;
+     position: relative;
+     padding-top: 110px;
+
+     box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.5);
+
+     overflow: visible;
+ }
+
+ .food-image {
+     position: absolute;
+     top: -110px;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .food-image img {
+     width: 380px;
+     object-fit: contain;
+
+     filter:
+         drop-shadow(-7px 6px 8px rgba(0, 0, 0, .35));
+ }
+
+ .card-content {
+     padding: 24px;
+ }
+
+ .food-title {
+     font-size: 2rem;
+     font-weight: 700;
+     color: #443733;
+     margin-top: 10px;
+     margin-bottom: 16px;
+ }
+
+ .tags {
+     display: flex;
+     gap: 8px;
+     flex-wrap: wrap;
+     margin-bottom: 18px;
+ }
+
+ .tag {
+     padding: 6px 12px;
+     border-radius: 50px;
+     font-size: .8rem;
+     font-weight: 500;
+ }
+
+ .cheese {
+     background: #d6c793;
+     box-shadow:
+         1px 1px 2px #555939;
+ }
+
+ .egg {
+     background: #d7cece;
+     box-shadow:
+         1px 1px 2px #756868;
+ }
+
+ .ham {
+     background: #e3e5cc;
+     box-shadow:
+         1px 1px 2px #68695f;
+ }
+
+ .description {
+     color: #665d59;
+     font-weight: 600;
+     line-height: 1.5;
+     font-size: .9rem;
+     margin-bottom: 25px;
+ }
+
+ .footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .price {
+     font-size: 2.2rem;
+     font-weight: 500;
+     font-family: "Italianno", cursive;
+ }
+
+ .cart-btn {
+     border: none;
+     cursor: pointer;
+     padding: 14px 24px;
+     border-radius: 16px;
+     background: #CBE46D;
+     color: #332c28;
+     font-size: 1rem;
+     font-weight: 600;
+     box-shadow:
+         2px 4px 2px #8B9166;
+     transition: .3s;
+ }
+
+ .cart-btn:hover {
+     transform: translateY(-3px);
+ }
+
+ .cart-btn:active {
+     transform: translateY(2px);
+     box-shadow: none;
+ }
